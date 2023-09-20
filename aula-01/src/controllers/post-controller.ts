@@ -21,6 +21,7 @@ async function deletePost(req: Request, res: Response) {
   if (isNaN(id)) res.sendStatus(httpStatus.BAD_REQUEST);
 
   await postService.deletePost(id);
+  res.sendStatus(204);
 }
 
 const postController = {
