@@ -43,7 +43,6 @@ model Address {
 }
 
 model ProfileService {
-  id Int @default(autoincrement())
   servicecode String @unique
   profile Profile @relation(fields: [profile_id], references: [id])
   profile_id Int
